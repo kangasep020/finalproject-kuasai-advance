@@ -6,7 +6,7 @@ services:
     environment:
       MYSQL_DATABASE: dbkuasai
       MYSQL_USER: cilsykuasaiuser
-      MYSQL_PASSWORD: cilsykuasaiuser
+      MYSQL_PASSWORD: cilsykuasaipassword
       MYSQL_ROOT_PASSWORD: test1234
     volumes:
       - mysql-data:/var/lib/mysql
@@ -27,7 +27,7 @@ services:
       - proxy_net
       - int_net
   web:
-    image: kangasepupnvj/finalproject-kuasai-advance:web-1.0
+    image: kangasepupnvj/finalproject-kuasai-advance:web-1.1
     depends_on:
       - db
     deploy:
@@ -60,5 +60,4 @@ networks:
   proxy_net:
     driver: overlay
   ext_net:
-    driver: overlay	
-
+    driver: overlay

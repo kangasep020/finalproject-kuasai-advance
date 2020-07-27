@@ -26,6 +26,9 @@ services:
     build:
       context: .
       dockerfile: web.Dockerfile
+    image: kangasepupnvj/finalproject-kuasai-advance:web-1.1
+    volumes: 
+      - ./file-web:/var/www/html/
     depends_on:
       - db
     networks:
